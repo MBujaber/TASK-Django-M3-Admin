@@ -21,7 +21,7 @@ class Pokemon(models.Model):
     name_ar = models.CharField(max_length=30, default="")
     name_jp = models.CharField(max_length=30, default="")
     created_at = models.DateTimeField(auto_now_add=True)
-    modified_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
 
     # description = models.TextField(default="")
     # opening_time = models.TimeField()
