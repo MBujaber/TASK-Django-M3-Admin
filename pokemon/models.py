@@ -17,11 +17,11 @@ class Pokemon(models.Model):
     type = models.CharField(max_length=60, choices=PokemonType.choices)
     hp = models.PositiveIntegerField()
     active = models.BooleanField(default=True)
-    name_fr = models.CharField(max_length=30, default="")
+    name_fr = models.CharField(max_length=30, default="", blank=True)
     name_ar = models.CharField(max_length=30, default="")
     name_jp = models.CharField(max_length=30, default="")
     created_at = models.DateTimeField(auto_now_add=True)
-    modified_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     # description = models.TextField(default="")
     # opening_time = models.TimeField()
